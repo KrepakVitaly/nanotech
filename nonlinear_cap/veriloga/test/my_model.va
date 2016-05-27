@@ -1,0 +1,34 @@
+`include "disciplines.vams" // Natures and disciplines 
+`include "constants.vams"   // Common physical and math 
+							// constants 
+
+module my_model(port1, g);
+
+	electrical port1;
+	electrical g;
+	//electrical [0:1] bus;
+	parameter real real_param = 1.0 from [0:inf);
+	parameter integer int_param = 1 from [-1:1] exclude 0;
+
+	parameter real T = 200;
+	parameter real R = 10e3;
+	parameter real k = 1.38e-23;
+
+	real real_var; 
+	analog begin 
+		@( initial_step ) begin 
+		//$display("Here!!!!!");
+		/*  Code inside an initial_step block is executed
+		at the first step of each analysis */
+		end
+
+		V(port1, g) <+ 1*white_noise(4*`P_K*T*R,"thermal");
+		//real_var = I(port1); // Current port1 to ground
+		//V(bus[0], bus[1]) <+ real_var * real_param * int_param;
+
+		@ ( final_step ) begin
+		/* Code inside an final_step block is executed
+		at the last step of each analysis */
+		end
+	end 
+endmodule

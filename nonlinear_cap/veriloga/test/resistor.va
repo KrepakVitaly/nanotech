@@ -1,0 +1,10 @@
+// Simple resistor
+
+`include "disciplines.vams"
+
+module resistor(p,n);
+parameter R=1.0 from (0:inf);
+electrical p,n;
+analog I(p,n) <+ V(p,n)/R;
+
+endmodule

@@ -1,0 +1,17 @@
+* "simulator" "HSPICE" 
+* "version" "A-2008.03 32-BIT"
+* "format" "HSP"
+* "rundate" "19:29:00 04/03/2015 "
+* "netlist" "my_model.sp "
+* "runtitle" "verilog-a my_model"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ drain =   3.0000        
++ gate = 500.0000m       
++ port1 =   0.            
++ source =   0.            
+***   END: Saved Operating Point ***                     

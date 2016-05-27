@@ -1,0 +1,31 @@
+* Verilog-A Log File
+* Input File  : test.sp
+* RTE Version : 1.52
+
+    During .hdl command processing, loading Verilog-A modules from
+            '.\resistor.va'.
+hsp-vacomp: 
+hsp-vacomp: Invoking the Verilog-A compiler for 'Z:\home\zorroxied\Workspace\sources\veriloga\test\resistor.va'
+hsp-vacomp:  lic: 
+hsp-vacomp:  lic: FLEXlm: v8.5b
+hsp-vacomp:  lic: USER:   zorroxied            HOSTNAME: zorroxied-VirtualBox
+hsp-vacomp:  lic: HOSTID: 0800278de5d7         PID:      61
+hsp-vacomp:  lic: Using FLEXlm license file:
+hsp-vacomp:  lic: C:\Flexlm\hspice_2007-09.lic
+hsp-vacomp:  lic: Checkout 1 hspiceva
+hsp-vacomp:  lic: License/Maintenance for hspiceva will expire on 31-dec-2020/2007.9
+hsp-vacomp:  lic: NODE LOCKED license on hostid 0800278de5d7
+hsp-vacomp:  lic:  
+hsp-vacomp: Synopsys HSPICE Verilog-A Compiler Version 1.52.021608.
+hsp-vacomp: Copyright (C) 2008 Synopsys, Inc. All Rights Reserved.
+hsp-vacomp: 
+hsp-vacomp: Error: syntax error
+hsp-vacomp: 	['resistor.va',10]
+hsp-vacomp: 	$display("Here!!!!!!!!!!!!!!!!!!!!!")
+hsp-vacomp: 	^^^^^^^^
+
+ ** error **
+ During Verilog-A Device processing:
+    Failed to generate the loadable component names file from the Verilog-A File,
+         'resistor.va'.
+

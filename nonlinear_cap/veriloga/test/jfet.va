@@ -1,0 +1,24 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+module jfet(d, g, s);
+    (* attr *)
+
+    parameter real Vto = -2.0 from (-inf:inf); // Threshold voltage
+    parameter real Beta = 1.0e-4 from [0:inf); // Transconductance
+    parameter real Lambda = 0.0 from [0:inf);  // Channel modulation
+
+    electrical d, g, s;
+
+    real Id, Vgs, Vds;
+    analog begin
+        Vgs = V(g,s);
+        Vds = V(d,s);
+        if (Vds <= Vgs-Vto)
+            Id = Beta*(1+Lambda*Vds)*Vds*(2*(Vgs-Vto)- Vds);
+        else if (Vgs-Vto < Vds)
+            Id = Beta*(1+Lambda*Vds)*(Vgs-Vto)*(Vgs-Vto);
+        I(d,s) <+ Id;
+    end
+
+endmodule
